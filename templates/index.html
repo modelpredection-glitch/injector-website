@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Injector Prediction</title>
+<style>
+
+body{
+font-family: Arial;
+background:#f4f6f8;
+text-align:center;
+margin-top:100px;
+}
+
+.container{
+background:white;
+padding:40px;
+width:400px;
+margin:auto;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+button{
+padding:10px 20px;
+background:#4CAF50;
+color:white;
+border:none;
+border-radius:5px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Injector Fault Prediction</h2>
+
+<form method="POST" enctype="multipart/form-data">
+
+<input type="file" name="file" required><br><br>
+
+<input type="number" name="odometer" placeholder="Enter Odometer Reading" required><br><br>
+
+<button type="submit">Predict</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

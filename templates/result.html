@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Result</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f4f6f8;
+text-align:center;
+margin-top:100px;
+}
+
+.container{
+background:white;
+padding:40px;
+width:400px;
+margin:auto;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+button{
+padding:10px 20px;
+background:#4CAF50;
+color:white;
+border:none;
+border-radius:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Prediction Result</h2>
+
+<p><b>Injector Condition:</b> {{prediction}}</p>
+
+<p><b>Confidence Level:</b> {{confidence}} %</p>
+
+<p><b>Remaining Useful Life:</b> {{rul}} km</p>
+
+<br>
+
+<a href="/">
+<button>Return to Home</button>
+</a>
+
+</div>
+
+</body>
+</html>
