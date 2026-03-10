@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML Predictive Maintenance</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f9fafb;
+            text-align: center;
+            padding: 50px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<h1>ML Driven Predictive Maintenance</h1>
+
+<input type="file" id="fileInput" />
+
+<div id="result" class="card"></div>
+
+<script>
+document.getElementById('fileInput').addEventListener('change', async function() {
+
+    const file = this.files[0];
+    const text = await file.arrayBuffer();
+
+    const response = await fetch('/api/predict', {
+        method: 'POST',
+        body: text
+    });
+
+    const data = await response.json();
+
+    document.getElementById('result').innerHTML =
+        "<h3>Failure Confidence: " + data.confidence + "%</h3>" +
+        "<h3>Estimated RUL: " + data.rul + "</h3>";
+});
+</script>
+
+</body>
+</html>
